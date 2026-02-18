@@ -9,6 +9,7 @@ import { UserModule } from './user/user.module';
 import { WebhookModule } from './webhook/webhook.module';
 import { FiatPayoutModule } from './fiat-payout/fiat-payout.module';
 import { CryptoPayoutModule } from './crypto-payout/crypto-payout.module';
+import { NetworksTokenModule } from './networks-token/networks-token.module';
 import { User } from './user/user.entity';
 import { Transaction } from './transaction/transaction.entity';
 
@@ -36,6 +37,7 @@ import { Transaction } from './transaction/transaction.entity';
     WebhookModule,
     FiatPayoutModule,
     CryptoPayoutModule,
+    NetworksTokenModule,
   ],
   controllers: [AppController],
   providers: [AppService],
