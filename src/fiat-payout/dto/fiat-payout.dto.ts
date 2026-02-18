@@ -17,10 +17,7 @@ export class FiatPayoutDto {
   @IsString()
   fiatCurrency: string;
 
-  @ApiProperty({ example: 'beneficiary-id' })
-  @IsNotEmpty()
-  @IsString()
-  beneficiaryId: string;
+
 
   @ApiProperty({ example: 'BANK_TRANSFER' })
   @IsNotEmpty()
