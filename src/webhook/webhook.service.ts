@@ -76,7 +76,7 @@ export class WebhookService {
       token,
     });
 
-    await this.userService.creditBalance(transaction.userId, transaction.amount);
+    await this.userService.creditBalance(transaction.userId, settledAmountInCrypto);
 
     this.logger.log(
       `Credited ${transaction.amount} to user ${transaction.userId} for reference ${reference}`,
