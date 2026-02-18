@@ -76,10 +76,13 @@ export class WebhookService {
       token,
     });
 
-    await this.userService.creditBalance(transaction.userId, settledAmountInCrypto);
+    const CRYPTO_TO_NGN_RATE = 1375;
+    const amountInNgn = settledAmountInCrypto * CRYPTO_TO_NGN_RATE;
+
+    await this.userService.creditBalance(transaction.userId, amountInNgn);
 
     this.logger.log(
-      `Credited ${transaction.amount} to user ${transaction.userId} for reference ${reference}`,
+      `Credited ${amountInNgn} NGN (${settledAmountInCrypto} crypto) to user ${transaction.userId} for reference ${reference}`,
     );
   }
 

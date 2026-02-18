@@ -43,8 +43,11 @@ export class FiatPayoutService {
 
     const reference = randomUUID();
 
+    const USDT_TO_NGN_RATE = 1600;
+    const amountInUsdt = dto.amount / USDT_TO_NGN_RATE;
+
     const payload = {
-      amount: dto.amount,
+      amount: amountInUsdt,
       token: dto.token,
       fiatCurrency: dto.fiatCurrency,
       payoutMethod: dto.payoutMethod,
