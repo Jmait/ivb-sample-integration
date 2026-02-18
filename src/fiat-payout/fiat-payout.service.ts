@@ -47,7 +47,6 @@ export class FiatPayoutService {
       amount: dto.amount,
       token: dto.token,
       fiatCurrency: dto.fiatCurrency,
-      beneficiaryId: dto.beneficiaryId,
       payoutMethod: dto.payoutMethod,
       accountNumber: dto.accountNumber,
       bankId: dto.bankId,
