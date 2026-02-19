@@ -4,10 +4,12 @@ import { IsEnum, IsNotEmpty, IsNumber, IsObject, IsOptional, IsString } from 'cl
 export enum PaymentType {
   FIAT = 'FIAT',
   CRYPTO = 'CRYPTO',
+
 }
 
 export enum PaymentMode {
   API = 'API',
+    CHECKOUT ='CHECKOUT',
 }
 
 export class InitiatePaymentDto {

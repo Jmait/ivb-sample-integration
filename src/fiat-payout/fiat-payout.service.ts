@@ -52,14 +52,14 @@ export class FiatPayoutService {
       fiatCurrency: dto.fiatCurrency,
       payoutMethod: dto.payoutMethod,
       accountNumber: dto.accountNumber,
-      bankId: dto.bankId,
+      bankCode: dto.bankId,
       reference,
     };
 
     const { data } = await firstValueFrom(
-      this.httpService.post(`${this.baseUrl}/fiat-payout/initiate`, payload, {
+      this.httpService.post(`${this.baseUrl}/fiat-transfer`, payload, {
         headers: {
-          Authorization: this.secretKey,
+          Authorization: `Bearer ${this.secretKey}`,
           'Content-Type': 'application/json',
         },
       }),
